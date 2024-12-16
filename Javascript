@@ -1,0 +1,29 @@
+const buttonNav = document.querySelector('#buttonNav');
+const iNav1 = buttonNav.querySelector('.iButton');
+const iNav2 = buttonNav.querySelectorAll('.iButton')[1];
+const home = document.querySelector('#HOME');
+
+// NAV BUTTON ON CLICK
+buttonNav.addEventListener('click', () => {
+    const ul = document.querySelector('.ul');
+    console.log(ul);
+
+    if(ul.classList.contains('animate-firstAnimation')) {
+        ul.classList.remove('animate-firstAnimation');;
+        ul.classList.add('animate-secondAnimation')
+    } else if(ul.classList.contains('animate-secondAnimation')){
+        ul.classList.add('animate-firstAnimation');
+        ul.classList.remove('animate-secondAnimation');
+    } else {
+        ul.classList.add('animate-firstAnimation');
+    }
+
+    // CHANGE DATA FEATHER I
+    iNav1.classList.toggle('hidden');
+    iNav2.classList.toggle('hidden');
+});
+
+
+
+
+
